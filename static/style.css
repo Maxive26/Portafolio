@@ -11,6 +11,7 @@
 body{
     min-height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 /* .particles-js{
@@ -26,7 +27,7 @@ html{
 
 .parent {
     display: grid;
-    grid-template-columns: .07fr 1fr;
+    grid-template-columns: .09fr 1fr;
     grid-template-rows: .1fr 1fr;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
@@ -41,6 +42,7 @@ html{
     display: flex;
     justify-content: right;
     align-items: center;
+    margin-top: 15px;
 }
 
 .div2 a{
@@ -50,6 +52,16 @@ html{
 
 box-icon{
     vertical-align: middle;
+}
+.arg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arg img{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
 }
 
 .cv button{
@@ -68,6 +80,27 @@ box-icon{
     transition: all .3s ease;
 }
 
+.dv{
+    padding: 15px 20px 15px 20px;
+    border-radius: 30px;
+    color: #000;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    /* background: rgb(203,46,181); */
+    /* background: linear-gradient(90deg, rgba(203,46,181,1) 0%, rgba(46,2,166,1) 100%); */
+    background: linear-gradient(90deg, #c77eff, #7e84ff, #7EFFB2, #c77eff);
+    background-size: 400% 400%;
+    animation: anim 2.5s infinite ease-in-out;
+    margin-right: 20px;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.dv:hover{
+    color: #fff;
+}
+
 @keyframes anim{
     0%{
         background-position: 0 50%;
@@ -83,7 +116,7 @@ box-icon{
 
 
 .cv button:hover{
-    color: #000}
+    color: #ffffff}
 
 .content{
     display: flex;
@@ -137,8 +170,8 @@ box-icon{
     flex-direction: column;
     align-items: center;
     backdrop-filter: blur(4px);
-    min-height: 100vh;
-    overflow: hidden;
+    height: 100vh;
+    /* overflow: hidden; */
     box-shadow: 9px 17px 15px 6px rgba(0,0,0,0.1);
 }
 
@@ -215,7 +248,7 @@ box-icon{
     outline: none;
     resize:none;
     width: 100%;
-    height: 100%;
+    height: 200px;
     /* box-shadow: 0 1px 25px rgba(0,0,0,0.2); */
     border-bottom: 1px solid black;
     font-size: 20px;
@@ -231,6 +264,9 @@ box-icon{
 
 .form__textarea{
     position: relative;
+    max-height: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .submit{
@@ -295,6 +331,7 @@ box-icon{
 }
 
 
+
 /* .form__input:focus + .form_label,
 .form__input:not(:placeholder-shown) + .form_label{
     transform: translateY(-12px) scale(.7);
@@ -302,6 +339,39 @@ box-icon{
     color: #3866f2;
 } */
 
+
+/* 655px */
+@media (max-height: 655px) {
+    .form__textarea textarea{
+        max-height: 100px;
+    }
+
+    .form{
+        gap: 15px;
+    }
+
+    .links{
+        margin-top: 0;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .name{
+        width: min(100% - 5px, 9000px);
+    }
+  }
+
+  @media (max-width: 560px){
+      .div2 a{
+        margin-right: 0;
+      }
+      .name{
+        font-size: 50px;
+      }
+      .arg{
+        display: none;
+      }
+  }
 
 
 
