@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+
+html{
+    background-image: url('pexels-francesco-ungaro-5459512.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    backdrop-filter: blur(4px);
+    box-shadow: 9px 17px 15px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    bottom: 0;
+    
+}
+
+
+.links a{
+    margin: 0 5px 0 5px;
+    padding: 8px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 0 20px;
+}
+
+.text{
+    color: #fff;
+    /* margin-left: 10px; */
+    font-size: 30px;
+    height: 100px;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    width: min(100% - 15px, 600px);
+    
+    margin-top: 20px;
+    /* padding: 5px; */
+    font-size: 50px;
+    font-family: 'Tilt Warp', cursive;
+    background: rgb(203,46,181);    
+    background-image: linear-gradient(90deg, rgba(203,46,181,1) 0%, rgba(46,2,166,1) 100%);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.p{
+    
+    /* border: 2px solid #fff; */
+    width: min(100% - 15px, 600px);
+    /* margin-inline: auto; */
+    color: #fff;
+}
+
+.p a{
+    position: absolute;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px;
+    color: #000;
+    border-radius: 20px;
+    transition: all .2s;
+    background: linear-gradient(90deg, rgba(46,197,203,1) 0%, rgba(2,166,115,1) 100%);
+}
+
+.content-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.form{
+    display: grid;
+    gap: 30px;
+    /* border: 1px solid black; */
+    width: min(100% - 15px, 200px);
+    margin-inline: auto;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 1px 25px rgba(0,0,0,0.2);
+    padding: 30px;
+}
+
+.form__input{
+    position: relative;
+}
+
+.form__input input{
+    position: relative;
+    width: 100%;
+    background: none;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    z-index: 1;
+}
+
+.form__input label{
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(2px);
+    transition: transform .5s, color .3s;
+}
+
+.form__textarea textarea{
+    background: none;
+    border: none;
+    outline: none;
+    resize:none;
+    width: 100%;
+    height: 200px;
+    /* box-shadow: 0 1px 25px rgba(0,0,0,0.2); */
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+
+.form__textarea label{
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(-2px);
+    transition: transform .5s, color .3s;
+}
+
+.form__textarea{
+    position: relative;
+    max-height: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.submit input{
+    font-size: 18px;
+    padding: 5px;
+    width: 80%;
+    color: #fff;
+    background: none;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: all .2s;
+    box-shadow: 0 1px 25px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+
+.submit input:hover{
+    color: #1a0a35;
+    font-size: 20px;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label{
+    transform: translateY(-18px) scale(.8);
+    transform-origin: left top;
+    color: #1a0a35;
+}
+
+.textarea:focus + .label,
+.textarea:not(:placeholder-shown) + .label{
+    transform: translateY(-18px) scale(.8);
+    transform-origin: left top;
+    color: #1a0a35;
+}
+
+.line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1a0a35;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+
+.input:focus ~ .line,
+.input:not(:placeholder-shown) ~ .line{
+    transform: scale(1);
+}
+
+.textarea:focus ~ .line,
+.textarea:not(:placeholder-shown) ~ .line{
+    transform: scale(1);
+}
